@@ -171,7 +171,8 @@ def jet_sibling_object(context, next):
         return
 
     sibling_object = None
-    object_pks = list(queryset.values_list('pk', flat=True))
+    object_pks = []
+    #object_pks = list(queryset.values_list('pk', flat=True))
 
     try:
         index = object_pks.index(original.pk)
